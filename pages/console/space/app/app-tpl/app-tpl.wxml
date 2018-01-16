@@ -1,0 +1,64 @@
+<template name="appTemplate">
+<view class="app-container">
+<view class="app-message">
+<view class='index-middle-item'>
+<view class='item-message'>
+运行状态：
+<text wx:if="{{appBaseData.state==='STARTED' && appBaseData.instance!==0}}" class="item-message-text normal">运行中</text>
+<text wx:elif="{{appBaseData.state==='STOPPED'}}" class="item-message-text warning">已停止</text>
+<text wx:else class="item-message-text danger">应用崩溃</text>
+</view>
+<view class='item-message'>
+实例数：{{appBaseData.instance}}</view>
+<view class='item-message'>
+内存配额：{{appBaseData.memory}}M</view>
+<view class='item-message'>
+创建时间：{{appBaseData.time}}</view>
+<view class='item-message clearfix'>
+<image wx:if="{{collected}}" catchtap="onLoveTap" class='item-img-love' src="/images/console/loved.png" mode="aspectFit"></image>
+<view catchtap="onLoveTap" wx:else class="app-watch">
+<image class='item-img-love' src="/images/console/no-love.png" mode="aspectFit"></image>
+<text class="watch-me">亲，点击关注哦！</text>
+</view>
+</view>
+<image class='item-img' src="{{appBaseData.buildpack}}" mode="aspectFit"></image>
+</view>
+</view>
+<view class="app-cpu">
+<view class='cpu-title'>
+cpu利用率变化 <text wx:if="{{appBaseData.state==='STOPPED'}}">(应用未启动)</text>
+</view>
+ <canvas canvas-id="cpuCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>
+<view class="app-storage">
+<view class='cpu-title'>
+内存利用量变化 <text wx:if="{{appBaseData.state==='STOPPED'}}">(应用未启动)</text>
+</view>
+<canvas canvas-id="storageCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>
+<view class="app-log clearfix">
+<view class='cpu-title'>
+应用动态
+</view>
+<view class="timeline-container clearfix">
+<view wx:if="{{activeData.length===0}}" class="activeDataFinished">
+  亲，应用暂时无动态···
+</view>
+<block wx:for="{{activeData}}" wx:for-item="item">
+<view class='timeline-item'>
+<view class="item-content-date">
+{{item.timestamp}}
+</view>
+<view class="item-content-message">
+{{item.actor_name}}{{item.type}}：{{item.actee_name}}
+</view>
+</view>
+</block>
+<view wx:if="{{activeDataFinished && activeData.length}}" class="activeDataFinished">
+  亲，没有更多动态了···
+</view>
+</view>
+
+</view>
+</view>
+</template>

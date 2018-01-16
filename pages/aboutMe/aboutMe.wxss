@@ -1,0 +1,56 @@
+page{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.me-top{
+  padding: 50rpx 20rpx 30rpx 20rpx;
+  background-color: #333;
+  height: 140px;
+}
+.img-container{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+}
+.head-img{
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 15rpx;
+width: 120rpx;
+height: 120rpx;
+vertical-align:middle;
+}
+.head-name{
+  margin-left: 20rpx;
+  color: #fff;
+  max-width: 260rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.me-middle{
+  display: flex;
+  flex-direction: column
+}
+.me-watch{
+  padding: 30rpx;
+  font-size: 32rpx;
+  color: #2d2d2d;
+  border-bottom: 1px solid #ececec;
+}
+.me-watch-img{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.set-buttom-exit{
+  margin-top: 40rpx;
+  padding: 25rpx 0;
+  background-color: #FF3908;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}

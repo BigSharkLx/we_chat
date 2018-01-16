@@ -1,0 +1,19 @@
+<template name="logTemplate">
+<view class="log-container">
+<view wx:if="{{logData.length}}" class="">
+<block wx:for="{{logData}}" wx:for-item="item">
+<view class="logitem-container">
+<view class="">
+{{item.time}}
+</view>
+<view class="">
+{{item.msg}}
+</view>
+</view>
+</block>
+</view>
+<view wx:else class="no-message">
+暂无日志消息
+</view>
+</view>
+</template>

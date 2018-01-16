@@ -1,0 +1,19 @@
+<template name="domainTemplate">
+<view class="domain-container">
+<view wx:if="{{domainData.length}}" class="">
+<block wx:for="{{domainData}}" wx:for-item="item">
+<view class="service-item">
+<view class="service-item-title">
+域名：{{item.host}}.truepaas.com
+</view>
+<view class="service-item-content">
+创建时间：{{item.time}}
+</view>
+</view>
+</block>
+</view>
+<view wx:else class="no-message">
+  暂无域名信息
+</view>
+</view>
+</template>

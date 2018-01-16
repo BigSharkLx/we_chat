@@ -1,0 +1,44 @@
+<import src="app-tpl/app-tpl.wxml" />
+<import src="example-tpl/example-tpl.wxml" />
+<import src="log-tpl/log-tpl.wxml" />
+<import src="domain-tpl/domain-tpl.wxml" />
+<import src="service-tpl/service-tpl.wxml" />
+<import src="version-tpl/version-tpl.wxml" />
+<import src="environment-tpl/environment-tpl.wxml" />
+<view class="container">
+  <view class="app-top">
+    <scroll-view class="scroll-view" scroll-x scroll-left="{{scrollLeft}}">
+      <view wx:for="{{tabData}}" wx:for-item="item" data-type="{{item.type}}" bindtap="scrollTabTap" class="{{activeTab===item.type?'scroll-view-active':''}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+
+      <view  class="main-container {{activeTab===0?'':'hidden'}}">
+      <template is="appTemplate" data="{{appBaseData:appBaseData,activeData:activeData,collected:collected,activeDataFinished:activeDataFinished}}" />
+      </view>
+
+    <view class="main-container {{activeTab===1?'':'hidden'}}">
+      <template is="exampleTemplate" data="{{exampleData}}" />
+    </view>
+
+    <view class="main-container {{activeTab===2?'':'hidden'}}">
+      <template is="logTemplate" data="{{logData}}" />
+    </view>
+
+    <view class="main-container {{activeTab===3?'':'hidden'}}">
+      <template is="versionTemplate" data="{{versionData}}" />
+    </view>
+
+    <view class="main-container {{activeTab===4?'':'hidden'}}">
+      <template is="serviceTemplate" data="{{bindServiceData}}" />
+    </view>
+
+    <view class="main-container {{activeTab===5?'':'hidden'}}">
+      <template is="domainTemplate" data="{{domainData}}" />
+    </view>
+
+    <view class="main-container {{activeTab===6?'':'hidden'}}">
+      <template is="environmentTemplate" data="{{envData}}" />
+    </view>
+</view>

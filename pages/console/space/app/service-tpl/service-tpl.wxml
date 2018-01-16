@@ -1,0 +1,22 @@
+<template name="serviceTemplate">
+<view class="service-container">
+<view wx:if="{{bindServiceData.length}}" class="">
+<block wx:for="{{bindServiceData}}" wx:for-item="item">
+<view class="service-item">
+<view class="service-item-title">
+服务实例：{{item.name}}（{{item.free===true?'免费':'收费'}}）
+</view>
+<view class="service-item-content">
+服务方案：{{item.plan}}
+</view>
+<view class="service-item-content">
+服务描述：{{item.desc}}
+</view>
+</view>
+</block>
+</view>
+<view wx:else class="no-message">
+暂无服务实例
+</view>
+</view>
+</template>

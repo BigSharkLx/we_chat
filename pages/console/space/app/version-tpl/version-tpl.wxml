@@ -1,0 +1,32 @@
+<template name="versionTemplate">
+  <view class="version-container">
+  <view wx:if="{{versionData.length}}" class="">
+  <block wx:for="{{versionData}}" wx:for-item="item">
+  <view class="version-item">
+  <view class="version-item-content">
+  <view class="version-item-detail">
+  版本号：{{item.VersionNo}} <text wx:if="{{item.IsUse==='Y'}}">【当前版本】</text>
+  </view>
+  <view class="version-item-detail">
+  创建时间：{{item.Time}}
+  </view>
+  <view class="version-item-detail">
+  创建者：{{item.CreatePerson}}
+  </view>
+  <view class="version-item-desc">
+  版本描述：{{item.Description}}
+  </view>
+
+  </view>
+
+  </view>
+
+  </block>
+  </view>
+<view wx:else class="no-message">
+  暂无版本信息
+</view>
+
+
+  </view>
+</template>

@@ -1,0 +1,58 @@
+<view class="us-container">
+  <image class="about-us" src="/images/aboutMe/aboutUs.png" mode="widthFix" binderror="" bindload=""></image>
+  <view class="desc-container">
+    <view class="desc-title">
+      产品核心价值观
+    </view>
+    <view class="desc-item">
+    <view class='main-title'>
+    1.标准化
+    </view>
+    <view class="desc-main">
+    TruePaaS提供多语言、框架支撑。提供云原生应用开发标准及基础支持，促进企业IT的标准化和规范化
+    </view>
+    </view>
+    <view class="desc-item">
+    <view class='main-title'>
+    2.提升软件交付效率
+    </view>
+    <view class="desc-main">
+    TruePaaS改变传统的交付模式，提供开发测试部署一体化解决方案，提高开发效率。
+    </view>
+    </view>
+    <view class="desc-item">
+    <view class='main-title'>
+    3.业务高可用、高并发
+    </view>
+    <view class="desc-main">
+    TruePaaS通过应用健康管理及负载均衡技术保障应用的高可用性和高并发。
+    </view>
+    </view>
+    <view class="desc-item">
+    <view class='main-title'>
+    4.托管运维、统一监控
+    </view>
+    <view class="desc-main">
+    TruePaaS对平台应用进行统一监控及管理，智能弹性扩展、应用自愈等技术实现运维从人工运维变成托管运维。
+    </view>
+    </view>
+    <view class="desc-item">
+    <view class='main-title'>
+    5.应用全生命周期全覆盖
+    </view>
+    <view class="desc-main">
+    TruePaaS提供应用生命周期的全覆盖，参与到应用的开发、测试、部署、升级全阶段。并提供一键部署、一键升级等简化操作。
+    </view>
+    </view>
+    <view class="desc-item">
+    <view class='main-title'>
+    6.应用弹性
+    </view>
+    <view class="desc-main">
+   TruePaaS提供基于应用的多种监测技术及智能弹性规则，保证应用的灵活的弹性。
+    </view>
+    </view>
+  </view>
+
+
+</view>

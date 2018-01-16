@@ -1,0 +1,34 @@
+page{
+  width: 100%;
+}
+text {
+  font-size: 26rpx;
+  color: #2d2d2d;
+}
+view{
+  color: #333;
+  font-size: 30rpx;
+}
+
+canvas {
+  width: 750rpx;
+  height: 400rpx;
+  z-index: 0;
+}
+.clearfix::after, .clearfix::before {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+.normal{
+  color: #33cc33;
+}
+.danger{
+  color: #ff0033;
+}
+.warning{
+  color: #999;
+}

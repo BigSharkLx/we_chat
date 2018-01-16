@@ -1,0 +1,96 @@
+<view class="container">
+  <view class="container-top">
+  <view class='my-used'>
+  <image class="my-used-img" src="/images/console/used.png" mode="aspectFit" binderror="" bindload=""></image>
+  组织配额【当前组织：{{array[index]}}】
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <image class="my-used-bottom" src="/images/console/bottom.png" mode="aspectFit" binderror="" bindload=""></image>
+  </picker>
+  </view>
+    <view class="progress">
+      <view class='clearfix slider-top'>
+        <text class="slider-title">内存配额(M)</text>
+        <text class='slider-number'>{{memPercent}}%(已用{{totalMemUsed}},共{{orgDetailData.memory_limit}})</text>
+      </view>
+      <view class="slider-bottom">
+        <progress percent="{{memPercent}}" stroke-width="10" activeColor="#36b5de" active />
+      </view>
+    </view>
+    <view class="progress">
+      <view class='clearfix slider-top'>
+        <text class="slider-title">实例数配额</text>
+        <text class='slider-number'>{{instancePercent}}%(已用{{totalInstanceUsed}},共{{orgDetailData.app_instance_limit}})</text>
+      </view>
+      <view class="slider-bottom">
+        <progress percent="{{instancePercent}}" stroke-width="10" activeColor="#36b5de" active />
+      </view>
+    </view>
+
+
+    <view class="other-used">
+      <view class='clearfix slider-top'>
+        <text class="slider-title">实例内存配额(M)：{{orgDetailData.instance_memory_limit}}</text>
+      </view>
+
+    </view>
+    <view class="other-used">
+      <view class='clearfix slider-top'>
+        <text class="slider-title">服务配额：{{orgDetailData.total_services}}</text>
+      </view>
+
+    </view>
+
+    <view class="other-used">
+      <view class='clearfix slider-top'>
+        <text class="slider-title">路由配额：{{orgDetailData.total_routes}}</text>
+      </view>
+
+    </view>
+
+
+
+    <view class="other-used">
+      <view class='clearfix slider-top'>
+        <text class="slider-title">域名配额:{{orgDetailData.total_private_domains}}</text>
+      </view>
+    </view>
+
+
+  </view>
+  <view class="container-cloud clearfix">
+    <view class="cloud-title">
+      <image class="my-cloud-img" src="/images/console/cloud.png" mode="aspectFit" binderror="" bindload=""></image>我的云空间</view>
+<block wx:for="{{totalSpace}}" wx:for-item="item">
+<view  bindtap="toSpace" data-guid="{{item.guid}}" class="cloud-item">
+<view class="item-name">{{item.name}}(内存:{{item.memUsed}}MB)</view>
+<view class="item-detail clearfix">
+<view class="detail-left">
+<view class="detail-text">应用</view>
+<view class="detail-number">{{item.appNum}}</view>
+</view>
+<view class="detail-middle">
+<view>
+<button class='detail-button-1'>
+{{item.startNum}}
+</button>
+</view>
+<view>
+<button class='detail-button-2'>
+{{item.stopNum}}
+</button>
+</view>
+<view>
+<button class='detail-button-3'>
+{{item.crashNum}}
+</button>
+</view>
+</view>
+<view class="detail-right">
+<view class="detail-text">服务</view>
+<view class="detail-number">{{item.instanceNum}}</view>
+</view>
+</view>
+</view>
+</block>
+  </view>
+</view>

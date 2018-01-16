@@ -1,0 +1,49 @@
+<template name="exampleTemplate">
+  <view class="example-container">
+  <view wx:if="{{exampleData}}" class="">
+  <view class="example-item">
+  <view class="example-item-title">
+  实例【{{exampleData.name}}】
+  </view>
+  <view class="example-item-content">
+  <view class="example-item-detail">
+  实例状态：{{exampleData.state}}
+  </view>
+  <view class="example-item-detail">
+  运行时长：{{exampleData.uptime}}
+  </view>
+  <view class="example-item-detail">
+  主机ip：{{exampleData.host}}
+  </view>
+  <view class="example-item-detail">
+  端口：{{exampleData.port}}
+  </view>
+  <view class="example-item-detail">
+  已使用CPU：{{exampleData.cpu}}%
+  </view>
+  <view class="example-item-detail">
+  已使用内存：{{exampleData.mem}}MB
+  </view>
+  <view class="example-item-detail">
+  已使用磁盘：{{exampleData.disk}}MB
+  </view>
+  <view class="example-item-detail">
+  内存配额：{{exampleData.mem_quota}}MB
+  </view>
+  <view class="example-item-detail">
+  磁盘配额：{{exampleData.disk_quota}}MB
+  </view>
+  </view>
+  </view>
+  </view>
+<view wx:else class="">
+<view class="no-message">
+  暂无实例状态信息
+</view>
+
+
+</view>
+
+
+  </view>
+</template>

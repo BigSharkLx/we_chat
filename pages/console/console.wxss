@@ -1,0 +1,177 @@
+page {
+  width: 100%;
+}
+
+.container {
+  background-color: #efefef;
+}
+
+.container-top {
+  border-bottom: 1px solid #d7d7d7;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.my-used {
+ background-color:#fff;
+padding:10rpx 0;
+border-bottom:1px solid #ececec;
+color:#333;
+margin-bottom:10rpx;
+float:left;
+width:100%;
+
+}
+
+.my-used-img {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+picker{
+  float: right;
+}
+
+.my-used-bottom {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.my-cloud-img {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin: 6rpx;
+}
+
+.slider-top {
+  margin-bottom: 10rpx;
+}
+
+.progress {
+  margin-top: 20rpx;
+}
+
+.slider-top text {
+  font-size: 26rpx;
+}
+
+.slider-title {
+  color: #000;
+  float: left;
+}
+
+.slider-number {
+  float: right;
+  color: #36b5de;
+}
+
+.container-service {
+  border-bottom: 1px solid #d7d7d7;
+  background: #fff;
+  padding: 30rpx 20rpx;
+}
+
+.service-item {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.service-item text {
+  float: left;
+}
+
+.service-left {
+  margin-right: 80rpx;
+}
+
+.container-cloud {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.cloud-title {
+  background-color: #fff;
+  padding: 10rpx 20rpx;
+  border-bottom: 1px solid #ececec;
+  color: #333;
+}
+
+.cloud-item {
+  width: 50%;
+  background: #fff;
+  float: left;
+}
+
+.item-name {
+  padding: 10rpx 20rpx;
+  font-size: 26rpx;
+  color: #2d2d2d;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-detail {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.detail-left {
+  float: left;
+}
+
+.detail-middle {
+  float: left;
+}
+
+.detail-right {
+  float: right;
+}
+
+.detail-text {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.detail-number {
+  font-size: 50rpx;
+  margin-top: 20rpx;
+  color: #66c6e5;
+}
+
+.detail-button-1, .detail-button-2, .detail-button-3 {
+  padding: 0;
+  width: 36rpx;
+  height: 36rpx;
+  margin-bottom: 34rpx;
+  color: #fff;
+  font-size: 20rpx;
+  line-height: 36rpx;
+}
+
+.detail-button-1 {
+  background-color: #21A153;
+}
+
+.detail-button-2 {
+  background-color:#9e9e9e;
+}
+
+.detail-button-3 {
+  background-color: #E92535;
+  margin-bottom: 0;
+}
+.other-used{
+  display: inline-flex;
+  width: 50%;
+  flex-direction: row;
+}

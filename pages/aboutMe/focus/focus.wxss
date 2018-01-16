@@ -1,0 +1,13 @@
+.focus-item{
+  padding: 20rpx;
+  border-bottom: 1px solid #ececec;
+}
+.item-left{
+  float: left
+}
+.item-right{
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}

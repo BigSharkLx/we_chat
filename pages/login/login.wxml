@@ -1,0 +1,17 @@
+<view class="container">
+  <image class='truepaas-img' src="/images/truepaas.png" mode="aspectFit"></image>
+  <text class='login-text'>TruePaaS</text>
+  <form class='login-form' bindsubmit="loginSubmit" report-submit="">
+    <view class="main-input clearfix">
+      <image class="login-logo-img" src="/images/login/acount.png" mode="aspectFit" binderror="" bindload=""></image>
+      <input type="text" name="userName" placeholder="账号" placeholder-class="placeholder" value="{{userName}}" bindinput="userInput" />
+      <image wx:if="{{showClear}}" catchtap="inputClear" class="login-clear" src="/images/login/clear.png" mode="aspectFit" binderror="" bindload=""></image>
+    </view>
+    <view class="clearfix">
+      <image class="login-logo-img" src="/images/login/psw.png" mode="aspectFit" binderror="" bindload=""></image>
+      <input type="text" name="passWord" placeholder="密码" password="true" placeholder-class="placeholder" value="{{}}" bindfocus="" bindconfirm="" />
+    </view>
+
+    <button class='login-button' form-type="submit">登录</button>
+  </form>
+</view>

@@ -1,0 +1,19 @@
+.about-us{
+  width: 750rpx;
+  height: 248rpx;
+}
+.desc-container{
+  padding: 20rpx;
+}
+.desc-title{
+  font-size: 40rpx;
+  color: #FF6600;
+}
+.main-title{
+  margin-top: 20rpx;
+
+}
+.desc-main{
+  color: #666;
+  font-size: 28rpx;
+}

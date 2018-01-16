@@ -1,0 +1,68 @@
+<view class="message-container">
+  <view class='space-bottom'>
+    <view bindtap="spaceTabTap" data-name="resource" class="{{activeTab==='resource'?'tab-item tab-item-active':'tab-item'}}">
+      资源告警
+    </view>
+    <view bindtap="spaceTabTap" data-name="URL" class="{{activeTab==='URL'?'tab-item tab-item-active':'tab-item'}}">
+      URL异常
+    </view>
+    <view bindtap="spaceTabTap" data-name="app" class="{{activeTab==='app'?'tab-item tab-item-active':'tab-item'}}">
+      应用动态
+    </view>
+  </view>
+
+
+  <view wx:if="{{activeTab==='resource'}}" class='tab-item-resource'>
+  <block wx:for="{{resourceArr}}" wx:for-item="item">
+  <view class="item-container">
+  <view class="item-message-container">
+  <view class="item-date">
+  {{item.time}}
+  </view>
+  <view class="item-content">
+  {{item.msg}}
+  </view>
+  </view>
+  </view>
+  </block>
+<view wx:if="{{resourceArrfinished}}" class="finished">
+  亲，已经到底了哦···
+</view>
+  </view>
+
+  <view wx:if="{{activeTab==='URL'}}" class='tab-item-resource'>
+<block wx:for="{{urlArr}}" wx:for-item="item">
+<view class="item-container">
+<view class="item-message-container">
+<view class="item-date">
+{{item.time}}
+</view>
+<view class="item-content">
+{{item.msg}}
+</view>
+</view>
+</view>
+</block>
+<view wx:if="{{urlArrfinished}}" class="finished">
+  亲，已经到底了哦···
+</view>
+  </view>
+
+  <view wx:if="{{activeTab==='app'}}" class='tab-item-resource'>
+  <block wx:for="{{appArr}}" wx:for-item="item">
+  <view class="item-container">
+  <view class="item-message-container">
+  <view class="item-date">
+  {{item.time}}
+  </view>
+  <view class="item-content">
+  {{item.msg}}
+  </view>
+  </view>
+  </view>
+  </block>
+  <view wx:if="{{appArrfinished}}" class="finished">
+  亲，已经到底了哦···
+  </view>
+  </view>
+</view>

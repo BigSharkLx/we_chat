@@ -1,0 +1,52 @@
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #0b1a2f;
+}
+
+.bigscreen-num-container {
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.total-num {
+  font-size: 60rpx;
+  color: #6cf;
+  margin-bottom: 10rpx;
+}
+
+.total-text {
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.bigscreen-sum {
+  padding: 20rpx;
+}
+
+.bigscreen-sum-item {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20rpx;
+  border: 1px solid #ececec;
+  margin-bottom: 10rpx;
+}
+
+.item-title {
+  font-size: 28rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.item-num {
+  font-size: 36rpx;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.item-img {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}

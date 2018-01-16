@@ -1,0 +1,131 @@
+<view class="container">
+  <view class='space-top'>
+    <view class="progress clearfix">
+      <text class="progress-title">内存</text>
+      <progress percent="{{memPercent}}" activeColor="#36b5de" active />
+      <text class='progress-number'>{{totalSpace.memUsed}}/{{totalSpace.quota_url?quota.memory_limit:'~'}}MB</text>
+    </view>
+    <view class="progress clearfix">
+      <text class="progress-title">应用</text>
+      <progress percent="{{}}" activeColor="#36b5de" active />
+      <text class='progress-number'>{{totalSpace.appNum}}/{{totalSpace.quota_url?quota.app_task_limit:'~'}}</text>
+    </view>
+    <view class="progress clearfix">
+      <text class="progress-title">服务</text>
+      <progress percent="{{instancePercent}}" activeColor="#36b5de" active />
+      <text class='progress-number'>{{totalSpace.instanceNum}}/{{totalSpace.quota_url?quota.total_services:'~'}}</text>
+    </view>
+    <view class="progress clearfix">
+      <text class="progress-title">路由</text>
+      <progress percent="{{routerPercent}}" activeColor="#36b5de" active />
+      <text class='progress-number'>{{routerNum}}/{{totalSpace.quota_url?quota.total_routes:'~'}}</text>
+    </view>
+  </view>
+  <view class='space-middle'>
+    <view class='total'>
+      <text class='total count-number'>{{totalSpace.appNum}}</text>
+      <view class='count-text'>总数</view>
+    </view>
+    <view class='normal'>
+      <text class='normal count-number'>{{totalSpace.startNum}}</text>
+      <view class='count-text'>运行中</view>
+    </view>
+    <view class='danger'>
+      <text class='danger count-number'>{{totalSpace.stopNum}}</text>
+      <view class='count-text'>停止</view>
+    </view>
+    <view class='warning'>
+      <text class='warning count-number'>{{totalSpace.crashNum}}</text>
+      <view class='count-text'>启动中</view>
+    </view>
+  </view>
+  <view class='space-bottom'>
+    <view bindtap="spaceTabTap" data-name="app" class="{{activeTab==='app'?'tab-item tab-item-active':'tab-item'}}">
+      应用信息
+    </view>
+    <view bindtap="spaceTabTap" data-name="service" class="{{activeTab==='service'?'tab-item tab-item-active':'tab-item'}}">
+      服务信息
+    </view>
+    <view bindtap="spaceTabTap" data-name="user" class="{{activeTab==='user'?'tab-item tab-item-active':'tab-item'}}">
+      用户信息
+    </view>
+  </view>
+
+  <view wx:if="{{activeTab==='app'}}" class='tab-item-app'>
+  <block wx:for="{{totalAppDetail}}" wx:for-item="item">
+  <view data-appguid="{{item.appguid}}" bindtap="toApp" class='index-middle-item'>
+  <view class='clearfix'>
+  <text class='item-name'>应用名称：{{item.appName}}</text>
+  </view>
+  <view class='item-message'>
+  运行状态：
+  <text wx:if="{{item.state==='STARTED' && item.instance!==0}}" class="normal">运行中</text>
+  <text  wx:elif="{{item.state==='STOPPED'}}" class="warning">已停止</text>
+  <text wx:else class="danger">应用崩溃</text>
+  </view>
+<text class="item-desc">实例数：{{item.instance}}
+</text>
+  <view class='item-message'>
+  <text>创建时间：{{item.time }}</text>
+  </view>
+  <image class='item-img-service' src="{{item.buildpack}}" mode="aspectFit"></image>
+  </view>
+  </block>
+  </view>
+
+  <view wx:if="{{activeTab==='service'}}" class='tab-item-service'>
+  <block wx:for="{{instanceArr}}" wx:for-item='item' >
+  <view class='index-middle-item'>
+  <view class='clearfix'>
+  <text class='item-name'>服务名称：{{item.instance_name}}</text>
+  </view>
+  <view class='item-message'>
+  <text>服务方案：{{item.instance_type}}</text>
+  </view>
+<text class="item-desc">描述：{{item.instance_desc}}  ({{item.instance_price}})
+</text>
+  <view class='item-message'>
+  <text>创建时间：{{item.instance_time}}</text>
+  </view>
+  <image class='item-img-service' src="{{item.instance_img}}" mode="aspectFit"></image>
+  </view>
+  </block>
+  </view>
+
+<view wx:if="{{activeTab==='user'}}" class="tab-item-user">
+<view class="user-item user-title">
+<view class="user-big">
+<text>用户名</text>
+</view>
+<view class="">
+<text>管理员</text>
+</view>
+<view class="">
+<text>审计员</text>
+</view>
+<view class="">
+<text>开发员</text>
+</view>
+</view>
+
+<block wx:for="{{usersDetail}}">
+<view class="user-item">
+<view class='user-big'>
+<view class="user-item-name">{{item.username}}</view>
+</view>
+<view class="">
+<image wx:if="{{item.space_roles.space_manager}}" src="/images/true.png" mode="aspectFit"></image>
+</view>
+<view class="">
+<image wx:if="{{item.space_roles.space_auditor}}" src="/images/true.png" mode="aspectFit"></image>
+</view>
+<view class="">
+<image wx:if="{{item.space_roles.space_developer}}" src="/images/true.png" mode="aspectFit"></image>
+</view>
+</view>
+</block>
+</view>
+
+
+
+</view>

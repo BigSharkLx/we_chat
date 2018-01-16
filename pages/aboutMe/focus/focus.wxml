@@ -1,0 +1,14 @@
+<view class="focus-container">
+<block wx:for="{{appData}}" wx:for-item="item">
+<view class="focus-item clearfix">
+<view class="item-left">{{item.name}}
+<text wx:if="{{item.state==='STARTED' && item.instance!==0}}" class="normal">(运行中)</text>
+<text  wx:elif="{{item.state==='STOPPED'}}" class="warning">(已停止)</text>
+<text wx:else class="danger">(应用崩溃)</text>
+</view>
+<image class="item-right" data-guid="{{item.guid}}" wx:if="{{collectedData[item.guid]}}" catchtap="onLoveTap"  src="/images/console/loved.png" mode="aspectFit"></image>
+<image class="item-right" data-guid="{{item.guid}}" wx:else catchtap="onLoveTap"  src="/images/console/no-love.png" mode="aspectFit"></image>
+</view>
+</block>
+
+</view>

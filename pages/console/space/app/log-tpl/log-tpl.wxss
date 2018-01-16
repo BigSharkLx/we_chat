@@ -1,0 +1,14 @@
+.log-container{
+  background: #666;
+}
+.logitem-container{
+border-bottom: 1px solid #ececec;
+padding: 10rpx;
+}
+
+.logitem-container view{
+  font-size: 28rpx;
+  color: #ececec;
+  padding: 5rpx 0;
+  word-break: break-all;
+}

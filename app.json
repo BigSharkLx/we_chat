@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/aboutMe/us/us",
+    "pages/aboutMe/focus/focus",
+    "pages/console/space/space",
+    "pages/bigScreen/bigScreen",
+    "pages/console/console",
+    "pages/console/space/app/app",
+    "pages/aboutMe/message/message",
+    "pages/aboutMe/aboutMe"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "TruePaaS",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "borderStyle": "white",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab/index.png",
+        "selectedIconPath": "/images/tab/index-active.png"
+      },
+      {
+        "pagePath": "pages/console/console",
+        "text": "控制台",
+        "iconPath": "/images/tab/console.png",
+        "selectedIconPath": "/images/tab/console-active.png"
+      },
+      {
+        "pagePath": "pages/bigScreen/bigScreen",
+        "text": "大屏",
+        "iconPath": "/images/tab/bigscreen.png",
+        "selectedIconPath": "/images/tab/bigscreen-active.png"
+      },
+      {
+        "pagePath": "pages/aboutMe/aboutMe",
+        "text": "我的",
+        "iconPath": "/images/tab/me.png",
+        "selectedIconPath": "/images/tab/me-active.png"
+      }
+    ]
+  }
+}

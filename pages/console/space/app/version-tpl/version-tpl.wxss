@@ -1,0 +1,24 @@
+.version-item {
+  margin-bottom: 30rpx;
+  background-color: #efefef;
+}
+
+.version-item-content {
+  padding: 20rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.version-item-detail {
+  color: #666;
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+  word-break: break-all;
+}
+
+.version-item-desc {
+  width: 100%;
+  word-break: break-all;
+  color: #666;
+  font-size: 26rpx;
+}
+

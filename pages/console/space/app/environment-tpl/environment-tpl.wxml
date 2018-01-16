@@ -1,0 +1,19 @@
+<template name="environmentTemplate">
+<view class="environment-container">
+<view wx:if="{{envData.length}}" class="">
+<block wx:for="{{envData}}" wx:for-item="item">
+<view class="service-item">
+<view class="service-item-title">
+变量名称：{{item.key}}
+</view>
+<view class="environment-item-content">
+变量值：{{item.value}}
+</view>
+</view>
+</block>
+</view>
+<view wx:else class="no-message">
+暂无环境变量
+</view>
+</view>
+</template>

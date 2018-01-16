@@ -1,1 +1,1 @@
-# we_chat
+#TruePaaS小程序助手

@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="me-top">
+    <image bindtap="showBigImg" class="head-img" src="{{avatarUrl}}" mode="aspectFit" binderror="" bindload=""></image>
+    <text class="head-name">{{userName}}</text>
+
+  </view>
+  <view class="me-middle">
+    <view bindtap="toMessage" class='me-watch'>
+      <image class="me-watch-img" src="/images/aboutMe/message.png" mode="aspectFit" binderror="" bindload=""></image>
+      我的消息
+    </view>
+    <view bindtap="toFocus" class='me-watch'>
+      <image  class="me-watch-img" src="/images/aboutMe/watch.png" mode="aspectFit" binderror="" bindload=""></image>
+      我的关注
+    </view>
+    <view bindtap="aboutUs" class='me-watch'>
+    <image class="me-watch-img" src="/images/set/about.png" mode="aspectFit" binderror="" bindload=""></image>
+    关于我们
+    </view>
+  </view>
+  <view bindtap="signOut" class="set-buttom-exit">
+  退出当前账号
+  </view>
+
+</view>
